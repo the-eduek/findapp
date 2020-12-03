@@ -1,0 +1,136 @@
+// Import General Styles common to all pages
+@import "./style.scss";
+
+// Main Section
+main {
+    .container-job {
+        padding: 2rem 1rem;    
+        background-color: $fadeBackground;
+        h2 {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+    
+        .job-wrapper {
+            margin: 2rem 0;
+            border-radius: 0.4rem;
+            background: $purple;
+            overflow: hidden;
+            box-shadow: 0px 0px 25px 1px $grey;
+            @include flex();
+            justify-content: flex-start;
+            transform: translateY(-3px);
+            transition: 200ms;
+            &:hover {
+                box-shadow: 0px 0px 3px 0px $grey;
+                transform: none;
+            }
+            .job {
+                padding: 0.6rem 1rem;
+                width: calc(100% - 10px);
+                background-color: $white;
+                @include flex();
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .job-inner {
+                    @include flex();
+                    width: 100%;
+                    justify-content: start;
+                }
+                .job__logo {
+                    width: 50px;
+                    height: 50px;
+                    @include flex();
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .job__description {
+                    padding: 0 1rem;
+                    a {
+                        &:hover {
+                            color: $purple;
+                            border-bottom: 1px solid $purple;
+                        }
+                    }
+                    p{
+                        text-transform: uppercase;
+                    }
+                }
+                .job__skill {
+                    display: none;
+                    .btn--skill {
+                        border: 1px solid $purple;
+                        font-size: 0.87rem;
+                        color: $purple;
+                        transition: 200ms;
+                        &:hover {
+                            color: $white;
+                            background: $backgroundGradient;
+                        }
+                    }
+                }
+                .job__location {
+                    color: $grey;                
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+}
+
+// Footer Section
+@media screen and (min-width: 650px) {
+    main {
+        .container-job {
+            .job-wrapper {  
+                .job {
+                    padding: 1rem;
+                    .job-inner {
+                        @include flex();
+                        width: 100%;
+                        justify-content: start;
+                    }
+                    .job__logo {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .job__skill {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 980px) {
+    main {
+        .container-job {
+            .job-wrapper {
+                width: 70%;
+                margin: 2rem auto;
+                .job {            
+                    .job-inner {
+                        width: fit-content;
+                    }
+                    .job__skill {
+                        max-width: 35%;
+                        .btn--skill {
+                            border: 1px solid $purple;
+                            color: $purple;
+                            transition: 200ms;
+                            &:hover {
+                                color: $white;
+                                background: $backgroundGradient;
+                            }
+                        }
+                    }
+                    .job__location {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

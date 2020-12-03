@@ -1,0 +1,244 @@
+// Contains some general styles common to all pages fromn the index style
+@import "./style.scss";
+
+// Header Section
+.header {
+    background: $fadeBackground;
+    .logo {
+        a{
+            border: none;
+            color: $purple;
+            color: transparent;
+            background: $backgroundGradient;
+            -webkit-background-clip: text;
+        }
+    }
+    nav {
+        .social {
+            li {
+                color: $purple;
+                color: transparent;
+                background: $backgroundGradient;
+                -webkit-background-clip: text;
+            }
+        }
+    }
+    .header__text {
+        color: $blackText;
+        padding: 0 2.5rem 1.5rem;
+        h1 {
+            color: $black;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;           
+        }
+        p{
+            line-height: 1.4;
+            font-size: 1.2rem;
+            &:last-child {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+main {    
+    background: $fadeBackground;
+    padding: 0.1rem 1rem;
+    .container {
+        color: $blackText;
+        border-radius: 0.5rem;
+        background: $white;
+        margin: 1.5rem 0;
+        padding: 1.5rem;      
+        box-shadow: 0px 0px 15px #dde1e3;
+        width: 100%;
+    }
+    .container.container--conditions {
+        padding: 0.5rem;
+    }
+    .form-group {
+        @include flex();
+        flex-direction: column;
+        margin: 1rem 0;
+        align-items: flex-start;
+        input[type=text], input[type=email], select, textarea {
+            border: none;
+            outline: none;
+            border: 1px solid $grey;
+            border-radius: 0.4rem;
+            box-shadow: 0px 1px 2px #dde1e3;
+            padding: 0.5rem;
+            // min-height: 2rem;
+            margin-top: 0.2rem;
+            width: 100%;
+            font-size: 1rem;
+            resize: none;            
+            &:focus{
+                box-shadow: 0 0 2px 3px $plum;
+            }
+        }
+        select {
+            appearance: none;
+            background: $white;
+            padding: 0;            
+            option {
+                @include flex();
+                // overflow-x: scroll;
+                margin: 0.2rem;
+                height: 2rem;
+            }
+        }
+        a {
+            color: $purple;
+            border-color: $purple;
+            &:hover {
+                color: rebeccapurple;
+                border-color: rebeccapurple;
+            }
+        }
+        .form-group--file {
+            border: 1px solid $grey;
+            border-radius: 0.4rem;
+            box-shadow: 1px 1px 2px #dde1e3;
+            padding: 0.5rem;
+            height: 2.25rem;
+            margin-top: 0.2rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: "Browse";
+                background-color: rebeccapurple;
+                color: $white;
+                position: absolute;
+                top: -1px;
+                right: 0;
+                border: 1px solid $grey;
+                padding: 0.5rem;
+            }
+            input {
+                opacity: 0;
+                position: absolute;
+                top: -5px;  
+                height: 0;
+                left: 0;
+            }
+        }
+    }
+    .form-group--radio {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .form-group--radio__item {
+            width: 50%;
+            line-height: 1.4;
+        }
+    }
+    .form-group--check {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;        
+        justify-content: space-between;  
+        align-items: center;
+        margin-top: 0.3rem;
+        .form-group--check__item {
+            width: 100%;
+        }
+    }
+    .btn--post-job {
+        width: 100%;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        padding: 1.5rem;
+        font-size: 1rem;
+        background: rebeccapurple;
+        color: $white;
+        font-weight: bolder;
+        &:hover {
+            background: $purple; 
+        }
+    }
+    .conditions {
+        padding: 1rem;        
+        padding-top: calc(1.5rem - 10px);
+        background-color: rgba(233, 212, 233, 0.6);
+        border-radius: 0.4rem;
+        h3 {
+            padding-bottom: 1rem;
+        }
+        ul{
+            list-style-type: none;
+        }
+    }
+    .grey-text {
+        color: #696868;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    small {
+        color: #696868;
+        display: block;
+        margin-top: 0.2rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .header {       
+        nav {
+            padding: 5% 10%;
+        }
+        .header__text {
+            padding: 3% 20%;
+            h1{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+    main {
+        .container {
+            padding: 3rem;
+        }  
+        .container.container--conditions {
+            padding: 10px;
+        }
+        .conditions {
+            padding: 3rem 1rem;
+            padding-top: calc(3rem - 10px);
+        } 
+        form {
+            width: 80%;        
+            margin: 0 auto;
+        }
+        .form-group--check {
+            .form-group--check__item {
+                width: 50%;
+            }
+        }
+    }    
+}
+
+@media screen and (min-width: 992px) {
+    .header {
+        .header__text {
+            padding-top: 0;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+    
+    form { 
+        @include flex();
+        align-items: flex-start;
+        .wrapper--one {
+            margin: 0 0.5rem;
+            flex: 3;
+        }
+        .wrapper--two {
+            flex: 2;        
+            margin: 0 0.5rem;
+        }        
+    }
+}

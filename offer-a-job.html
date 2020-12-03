@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findApp &mdash; Job Board For Tech Newbies</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+    <!-- CSS -->    
+    <link rel="stylesheet" href="styles/offer.css" type="text/css">
+    
+	<!-- Font Awesome Icons -->
+	<script src="https://kit.fontawesome.com/c6af6339c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo"><a href="index.html">findApp</a></div>
+
+            <div class="links-wrapper">
+                <ul class="social">
+                    <li>
+                        <a href="https://www.twitter.com/the_eduek" target=""><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <span class="tooltip">Follow Us On Twitter</span>
+                    </li>
+                    <li>
+                        <a href="#" target=""><i class="fab fa-telegram-plane fa-2x" aria-hidden="true"></i></a>
+                        <span class="tooltip">Follow Us On Telegram</span>
+                    </li>                
+                </ul>
+            </div>
+        </nav>        
+        <div class="header__text">
+            <h1>Offer a Job</h1>
+            <p>We're a job board specifically for tech newbies. We understand the importance
+                for entry level positions for both employers and employees so, we have come to bridge that gap.</p>
+            <p><strong>Reach over 10,000+ Newbie Developers in our network!</strong></p>
+
+        </div>
+    </header>
+
+    <main>
+        <form method="POST">
+            <section class="wrapper--one">
+                <section class="container container--job">
+                    
+                    <h3>Job Info <i class="fas fa-laptop-code" aria-hidden="true"></i></h3>
+
+                    <div class="form-group form-group--radio">
+                        <div class="form-group--radio__item">               
+                            <input type="radio" name="job-type" value="full-time" id="job-type-fulltime" required>
+                            <label for="job-type-fulltime">Full Time</label>
+                        </div>
+                        <div class="form-group--radio__item">
+                            <input type="radio" name="job-type" value="part-time" id="job-type-parttime">
+                            <label for="job-type-parttime"> Part Time</label>
+                        </div>
+                        <div class="form-group--radio__item">
+                            <input type="radio" name="job-type" value="contractor" id="job-type-contract">
+                            <label for="job-type-contract">Contractor</label>
+                        </div>
+                        <div class="form-group--radio__item">
+                            <input type="radio" name="job-type" value="internship" id="job-type-intern">
+                            <label for="job-type-intern">Internship</label>                        
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="job-position">Position</label>
+                        <input type="text" name="positon" id="job-position" placeholder="e.g Junior Frontend Developer" aria-required="true" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job-location">Location</label>
+                        <input type="text" name="location" id="job-location" placeholder="e.g. Lekki, Lagos. (Leave blank if job is platform independent)" aria-required="true" required>
+                    
+                        <div class="form-group form-group--check">
+                            <div class="form-group--check__item">
+                                <input type="checkbox" name="remote" id="job-remote" value="remote">                    
+                                <label for="job-remote">Remote Work Supported</label>
+                            </div>
+
+                            <div class="form-group--check__item">
+                                <input type="checkbox" name="relocate" id="job-relocate" value="relocate">                    
+                                <label for="job-relocate">Helps Relocating</label>
+                            </div>
+                        </div>                    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job-salary">Salary</label>
+                        <input type="text" name="salary" id="job-salary" aria-required="true" placeholder="e.g. ₦50,000 - ₦80,000 / month" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job-description">Description</label>
+                        <textarea name="description" id="job-description" rows="10" aria-required="true" required></textarea>
+                    </div>
+
+                    <div class="form-group form-group--select">
+                        <label for="job-tags">Tags</label>
+                        <select aria-placeholder="Select One" multiple>
+                            <option selected disabled style="display: none;">Select option</option>
+                            <option value="html">HTML5</option>
+                            <option value="css">CSS3</option>
+                            <option value="js">JavaScript</option>
+                            <option value="react">React</option>
+                            <option value="vue">Vue.js</option>
+                            <option value="ember">ember</option>
+                            <option value="figma">Figma</option>
+                            <option value="xd">Adobe XD</option>
+                            <option value="django">Django</option>
+                            <option value="php">PHP</option>
+                            <option value="laravel">Laravel</option>
+                        </select>
+                    </div>                
+                </section>
+
+                <section class="container container--company">
+
+                    <h3>Company Info <i class="fa fa-briefcase" aria-hidden="true"></i></h3>
+
+                    <div class="form-group">
+                        <label for="company-name">Name</label>
+                        <input type="text" name="company" id="company-name" aria-required="true" placeholder="e.g. Igor's Inc" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-web">Website</label>
+                        <input type="text" name="website" id="company-web" aria-required="true" placeholder="e.g. https://igors-inc.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-twitter">Twitter</label>
+                        <input type="text" name="twitter" id="company-name" placeholder="@igors_inc">
+                    </div>                    
+                        
+                    <div class="form-group">
+                        <label for="company-apply">URL or Email to apply</label>
+                        <input type="text" name="apply" id="company-apply" aria-required="true" placeholder="e.g. hr@igorsinc.com OR https://igors-inc.com/jobs/apply" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-about">About your Company</label>
+                        <textarea name="about" id="company-about" rows="10" aria-required="true" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-email">Contact Email (just for us)</label>
+                        <input type="text" name="apply" id="company-apply" aria-required="true" placeholder="e.g. person@igorsinc.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group--file">Choose File...
+                            <input type="file" name="logo" id="company-logo">
+                            <span class="file-custom"></span>
+                        </label>
+                        <small>Best results with a squared image of at least 400x400px!</small>
+                    </div>
+                </section>
+            </section>
+
+            <section class="wrapper--two">
+                <section class="container container--conditions">
+                    <div class="conditions">
+                        <h3>Job Posting <i class="fa fa-bell" aria-hidden="true"></i></h3>
+                        <ul>
+                            <li><i class="fa fa-clock" aria-hidden="true"></i> Published Instantly</li>
+                            <li><i class="fa fa-calendar" aria-hidden="true"></i> Posted for 30(+1) days</li>
+                            <li><i class="fab fa-telegram-plane" aria-hidden="true"></i> Notify our Telgram channel</li>
+                            <li><i class="fab fa-twitter" aria-hidden="true"></i> Posted on our twitter account</li>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i> Support</li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="form-group">
+                    <label for="post-highlight">
+                        <input type="checkbox" name="highlight" id="post-highlight" value="post-highlight">
+                        <i class="fas fa-chevron-up" aria-hidden="true"></i> Highlight my post in the featured section (<strong>+ ₦10,000</strong>)
+                    </label>
+                    <label for="post-condition">
+                        <input type="checkbox" name="highlight" id="post-condition" value="post-condition" required>
+                        I have read and accepted the <a href="" target=""><strong>Terms Of Service</strong></a>
+                    </label>               
+                </div>    
+                <input type="submit" class="btn btn--post-job" value="Post Your Job">
+                <div class="grey-text">
+                    After posting your job, you will get a confirmation e-mail including an edit link to change any mistakes.
+                </div>                
+            </section>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="row1">
+            <h3>10,000+ NEWBIE DEVELOPERS WAITING FOR THAT ONE OFFER</h3>
+        </div>
+        <div class="row2">
+            <div class="technology">
+                <div class="technology__img-outer">               
+                    <div class="line line--x"></div>
+                    <div class="line line--y"></div>
+                    <div class="technology__img">
+                        <img src="styles/images/sass.png" alt="Sass Logo">
+                    </div>                    
+                </div>
+                <div class="technology__desc">
+                    <h1>made with</h1>
+                    <p class="text--sass">Sass</p>
+                </div>
+            </div>
+            <div class="technology">                
+                <div class="technology__img-outer">
+                    <div class="line line--x"></div>
+                    <div class="line line--y"></div>
+                    <div class="technology__img">
+                        <img src="styles/images/javascript.png" alt="Vanilla JS Logo">
+                    </div>
+                </div>
+                <div class="technology__desc">
+                    <h1>made with</h1>
+                    <p class="text--js">Vanilla JS</p>
+                </div>
+            </div>
+        </div>
+        <div class="row3">
+            <ul class="social">
+                <li>
+                    <a href="https://www.twitter.com/the_eduek" target=""><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <span class="tooltip">Follow Us On Twitter</span>
+                </li>
+                <li>
+                    <a href="#" target=""><i class="fab fa-telegram-plane fa-2x" aria-hidden="true"></i></a>
+                    <span class="tooltip">Follow Us On Telegram</span>
+                </li>                
+            </ul>
+        </div>
+        <div class="row4">
+            <a href="#" target="" class="btn btn--job">OFFER A JOB <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="row5">
+            <div>
+                <p><a href="" target="">Privacy Policy</a></p>
+                <p><a href="" target="">Terms Of Service</a></p>
+            </div>            
+            <p>&copy; 2020 Developed By Dueek</p>
+        </div>
+    </footer>    
+</body>
+</html>
