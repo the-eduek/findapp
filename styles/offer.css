@@ -507,7 +507,7 @@ a {
   -webkit-background-clip: text;
 }
 
-.header nav .social li {
+.header nav .social li a i {
   color: #8429bb;
   color: transparent;
   background: -webkit-gradient(linear, right top, left top, from(#4B0082), color-stop(#720e9e), to(#662d91));
@@ -741,7 +741,7 @@ main small {
 
 @media screen and (min-width: 500px) {
   .header nav {
-    padding: 5% 10%;
+    padding: 3% 10%;
   }
   .header .header__text {
     padding: 3% 20%;

@@ -17,10 +17,12 @@
         .social {
             li {
                 a {
-                    color: $purple;
-                    color: transparent;
-                    background: $backgroundGradient;
-                    -webkit-background-clip: text;
+                    i {
+                        color: $purple;
+                        color: transparent;
+                        background: $backgroundGradient;
+                        -webkit-background-clip: text;
+                    }
                 }
             }
         }
