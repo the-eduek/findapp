@@ -507,7 +507,8 @@ a {
   -webkit-background-clip: text;
 }
 
-.header nav .social li a i {
+.header nav .social i {
+  border: none;
   color: #8429bb;
   color: transparent;
   background: -webkit-gradient(linear, right top, left top, from(#4B0082), color-stop(#720e9e), to(#662d91));

@@ -15,15 +15,12 @@
     }
     nav {
         .social {
-            li {
-                a {
-                    i {
-                        color: $purple;
-                        color: transparent;
-                        background: $backgroundGradient;
-                        -webkit-background-clip: text;
-                    }
-                }
+            i{
+                border: none;
+                color: $purple;
+                color: transparent;
+                background: $backgroundGradient;
+                -webkit-background-clip: text;               
             }
         }
     }
